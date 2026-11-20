@@ -1,7 +1,7 @@
 import fs from "fs";
 
-const INPUT_FILE = "egyptian-penal-code.json";
-const OUTPUT_FILE = "egyptian-penal-code-final.json";
+const INPUT_FILE = "data/raw/egyptian-penal-code.json";
+const OUTPUT_FILE = "data/final/egyptian-penal-code-final.json";
 
 // =========================================================
 // HELPERS

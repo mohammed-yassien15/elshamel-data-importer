@@ -3,7 +3,7 @@ import * as cheerio from "cheerio";
 
 const SOURCE_URL = "https://manshurat.org/node/14677";
 
-const OUTPUT_FILE = "egyptian-penal-code.json";
+const OUTPUT_FILE = "data/raw/egyptian-penal-code.json";
 
 // =========================================================
 // HELPERS
