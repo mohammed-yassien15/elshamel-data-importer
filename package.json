@@ -1,15 +1,29 @@
 {
-  "name": "elshameldataimporter",
+  "name": "elshamel-data-importer",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "Node.js pipeline for scraping, cleaning, validating, and preparing Egyptian legislation for the El Shamel LegalTech platform.",
+  "private": false,
   "type": "module",
+  "scripts": {
+    "scrape:civil": "node scrapeCivilLaw.js",
+    "clean:civil": "node cleanCivilLaw.js",
+    "pipeline:civil": "npm run scrape:civil && npm run clean:civil",
+    "scrape:procedures": "node scrapeProceduresLaw.js",
+    "clean:procedures": "node cleanProceduresLaw.js",
+    "scrape:penal": "node scrapePenalCode.js",
+    "clean:penal": "node cleanPenalCode.js"
+  },
+  "keywords": [
+    "egyptian-law",
+    "legaltech",
+    "web-scraping",
+    "data-pipeline",
+    "supabase",
+    "nodejs",
+    "cheerio"
+  ],
+  "author": "Mohammed Yassien",
+  "license": "ISC",
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
     "cheerio": "^1.2.0",
