@@ -1,8 +1,8 @@
 import fs from "fs";
 
-const INPUT_FILE = "egyptian-evidence-law.json";
+const INPUT_FILE = "data/raw/egyptian-evidence-law.json";
 
-const OUTPUT_FILE = "egyptian-evidence-law-final.json";
+const OUTPUT_FILE = "data/final/egyptian-evidence-law-final.json";
 
 // =========================================================
 // HELPERS

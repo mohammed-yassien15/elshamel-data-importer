@@ -4,7 +4,7 @@ import * as cheerio from "cheerio";
 const SOURCE_URL =
   "https://alberonsy.com/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%A7%D9%84%D8%A5%D8%AB%D8%A8%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%AF-%D8%A7%D9%84%D9%85%D8%AF%D9%86%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%AA%D8%AC/";
 
-const OUTPUT_FILE = "egyptian-evidence-law.json";
+const OUTPUT_FILE = "data/raw/egyptian-evidence-law.json";
 
 // =========================================================
 // HELPERS

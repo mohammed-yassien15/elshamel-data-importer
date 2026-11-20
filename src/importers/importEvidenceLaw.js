@@ -4,7 +4,7 @@ import { createClient } from "@supabase/supabase-js";
 
 dotenv.config();
 
-const INPUT_FILE = "egyptian-evidence-law-final.json";
+const INPUT_FILE = "data/final/egyptian-evidence-law-final.json";
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 
