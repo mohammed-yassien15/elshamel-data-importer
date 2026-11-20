@@ -3,7 +3,7 @@ import * as cheerio from "cheerio";
 
 const HTML_FILE = "data/source/family-insurance-fund-law-11-2004.html";
 
-const OUTPUT_FILE = "family-insurance-fund-law-11-2004.json";
+const OUTPUT_FILE = "data/raw/family-insurance-fund-law-11-2004.json";
 
 const SOURCE_URL = "https://alhasswalawfirm.com/law-library/law-11-2004";
 
