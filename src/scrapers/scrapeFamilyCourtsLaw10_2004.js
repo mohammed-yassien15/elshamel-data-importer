@@ -3,7 +3,7 @@ import * as cheerio from "cheerio";
 
 const HTML_FILE = "data/source/family-courts-law-10-2004.html";
 
-const OUTPUT_FILE = "family-courts-law-10-2004.json";
+const OUTPUT_FILE = "data/raw/family-courts-law-10-2004.json";
 
 const SOURCE_URL =
   "https://alberonsy.com/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%B1%D9%82%D9%85-10-%D9%84%D8%B3%D9%86%D8%A9-2004-%D8%A8%D8%A5%D8%B5%D8%AF%D8%A7%D8%B1-%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%A5%D9%86%D8%B4%D8%A7%D8%A1-%D9%85%D8%AD%D8%A7/";
