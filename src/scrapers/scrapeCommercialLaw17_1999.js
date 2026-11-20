@@ -3,7 +3,7 @@ import * as cheerio from "cheerio";
 
 const HTML_FILE = "data/source/commercial-law-17-1999.html";
 
-const OUTPUT_FILE = "commercial-law-17-1999.json";
+const OUTPUT_FILE = "data/raw/commercial-law-17-1999.json";
 
 const SOURCE_URL =
   "https://alberonsy.com/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9-17-%D9%84%D8%B3%D9%86%D8%A9-1999-%D9%88%D8%AA%D8%B9%D8%AF%D9%8A%D9%84%D8%A7%D8%AA%D9%87/";

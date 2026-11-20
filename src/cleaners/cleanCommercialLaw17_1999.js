@@ -1,8 +1,8 @@
 import fs from "fs";
 
-const INPUT_FILE = "commercial-law-17-1999.json";
+const INPUT_FILE = "data/raw/commercial-law-17-1999.json";
 
-const OUTPUT_FILE = "commercial-law-17-1999-final.json";
+const OUTPUT_FILE = "data/final/commercial-law-17-1999-final.json";
 
 const SEPARATOR = "___________________________________________";
 
