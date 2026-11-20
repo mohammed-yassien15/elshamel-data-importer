@@ -3,7 +3,7 @@ import * as cheerio from "cheerio";
 
 const HTML_FILE = "data/source/personal-status-law-1-2000.html";
 
-const OUTPUT_FILE = "personal-status-law-1-2000.json";
+const OUTPUT_FILE = "data/raw/personal-status-law-1-2000.json";
 
 const SOURCE_URL =
   "https://alberonsy.com/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%B1%D9%82%D9%85-1-%D9%84%D8%B3%D9%86%D8%A9-2000-%D8%A8%D8%A5%D8%B5%D8%AF%D8%A7%D8%B1-%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%AA%D9%86%D8%B8%D9%8A%D9%85-%D8%A8%D8%B9%D8%B6/";
