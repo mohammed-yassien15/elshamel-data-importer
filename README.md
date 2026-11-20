@@ -1,19 +1,16 @@
 # El Shamel Data Importer
 
-Node.js data pipeline for collecting, cleaning, validating, and preparing Egyptian legislation for the **El Shamel LegalTech** platform.
-
-The project contains law-specific scrapers and cleanup scripts that transform public legal web content into structured JSON ready for database import.
+Node.js data pipeline for collecting, cleaning, validating, and importing Egyptian legislation for the **El Shamel LegalTech** platform.
 
 ## What this project does
 
 - Scrapes Egyptian legislation from public legal sources.
 - Extracts article numbers, article text, and legal hierarchy.
-- Preserves hierarchy such as division, book, part, chapter, section, and subsection.
-- Cleans malformed or misplaced headings from article content.
-- Handles special legal states such as repealed articles where supported by the source data.
-- Runs validation checks for duplicate article numbers, empty articles, and suspicious hierarchy text.
-- Produces normalized JSON datasets for use by El Shamel.
-- Supports Supabase-based import workflows through environment variables without exposing credentials.
+- Preserves division, book, part, chapter, section, and subsection structure.
+- Cleans source-specific formatting and malformed hierarchy.
+- Validates duplicate article numbers, empty articles, and suspicious content.
+- Produces normalized JSON datasets.
+- Imports validated legal data into Supabase.
 
 ## Tech stack
 
@@ -23,9 +20,22 @@ The project contains law-specific scrapers and cleanup scripts that transform pu
 - Supabase
 - dotenv
 
-## Current workflow
+## Project structure
 
-Most laws follow a two-stage pipeline:
+```text
+src/
+  scrapers/     # Source extraction
+  cleaners/     # Normalization and law-specific corrections
+  importers/    # Validated Supabase import scripts
+
+.env.example
+package.json
+README.md
+```
+
+Generated and source datasets are temporarily kept in the repository root because the existing scripts use root-relative data paths. They will be migrated to a dedicated `data/` structure together with path updates in a separate safe refactor.
+
+## Pipeline
 
 ```text
 Public legal source
@@ -34,21 +44,24 @@ Scraper
       ↓
 Raw JSON
       ↓
-Cleanup / normalization
+Cleaner / validation
       ↓
-Validated final JSON
+Final JSON
       ↓
-Supabase / El Shamel
+Supabase importer
+      ↓
+El Shamel
 ```
 
-For example, the Egyptian Civil Law pipeline is:
+Example — Egyptian Civil Law:
 
 ```bash
 npm run scrape:civil
 npm run clean:civil
+npm run import:civil
 ```
 
-Or run both stages:
+Run scraping + cleaning:
 
 ```bash
 npm run pipeline:civil
@@ -63,7 +76,7 @@ npm install
 cp .env.example .env
 ```
 
-Then add your own values:
+Add your own local credentials:
 
 ```env
 SUPABASE_URL=your-project-url
@@ -74,7 +87,7 @@ SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 
 ## Supported legal datasets
 
-The repository includes dedicated scraping and cleaning scripts for multiple Egyptian laws, including:
+The repository includes dedicated workflows for:
 
 - Civil Law
 - Civil and Commercial Procedures Law
@@ -90,7 +103,7 @@ The repository includes dedicated scraping and cleaning scripts for multiple Egy
 
 ## Data model
 
-A normalized article can contain:
+A normalized article can include:
 
 ```json
 {
@@ -110,26 +123,23 @@ A normalized article can contain:
 
 ## Validation
 
-Scrapers and cleanup scripts include checks for:
+The scripts include checks for:
 
 - duplicate article numbers
 - empty article content
 - unexpected hierarchy headings inside article text
 - first and last extracted article
-- total extracted article count
+- extracted article totals
+- law-specific expected counts where available
 
-Always review validation output before importing a dataset into the production database.
+Always review validation output before importing a dataset into Supabase.
 
 ## Security
 
 - `.env` is ignored by Git.
 - `.env.example` contains variable names only.
-- Supabase service-role credentials must remain local.
-- Do not place secrets directly inside scraper or importer source files.
-
-## Project purpose
-
-This repository is the data-engineering companion to **El Shamel**, a LegalTech platform focused on making Egyptian legislation easier to structure, search, and read in a mobile experience.
+- Supabase service-role credentials stay local.
+- Secrets must never be hardcoded in scraper, cleaner, or importer files.
 
 ## Author
 
