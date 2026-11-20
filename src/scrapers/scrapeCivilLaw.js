@@ -591,7 +591,7 @@ async function scrape() {
   };
 
   fs.writeFileSync(
-    "egyptian-civil-law.json",
+    "data/raw/egyptian-civil-law.json",
     JSON.stringify(output, null, 2),
     "utf8",
   );
@@ -639,7 +639,7 @@ async function scrape() {
 
   console.log("");
 
-  console.log("Saved → egyptian-civil-law.json");
+  console.log("Saved → data/raw/egyptian-civil-law.json");
 }
 
 // =========================================================

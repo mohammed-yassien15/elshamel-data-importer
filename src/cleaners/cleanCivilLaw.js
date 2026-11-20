@@ -1,7 +1,7 @@
 import fs from "fs";
 
-const INPUT_FILE = "egyptian-civil-law.json";
-const OUTPUT_FILE = "egyptian-civil-law-final.json";
+const INPUT_FILE = "data/raw/egyptian-civil-law.json";
+const OUTPUT_FILE = "data/final/egyptian-civil-law-final.json";
 
 // =========================================================
 // LOAD RAW JSON
