@@ -1,7 +1,7 @@
 import fs from "fs";
 import * as cheerio from "cheerio";
 
-const HTML_FILE = "labor-law-14-2025.html";
+const HTML_FILE = "data/source/labor-law-14-2025.html";
 
 const OUTPUT_FILE = "labor-law-14-2025.json";
 
