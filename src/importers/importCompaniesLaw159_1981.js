@@ -4,7 +4,7 @@ import { createClient } from "@supabase/supabase-js";
 
 dotenv.config();
 
-const INPUT_FILE = "companies-law-159-1981-final.json";
+const INPUT_FILE = "data/final/companies-law-159-1981-final.json";
 
 const EXPECTED = {
   lawNumber: "159",

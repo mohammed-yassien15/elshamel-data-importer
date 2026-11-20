@@ -1,8 +1,8 @@
 import fs from "fs";
 
-const INPUT_FILE = "companies-law-159-1981.json";
+const INPUT_FILE = "data/raw/companies-law-159-1981.json";
 
-const OUTPUT_FILE = "companies-law-159-1981-final.json";
+const OUTPUT_FILE = "data/final/companies-law-159-1981-final.json";
 
 const EXPECTED = {
   total: 212,
