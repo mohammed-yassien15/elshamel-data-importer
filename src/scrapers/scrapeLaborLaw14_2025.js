@@ -3,7 +3,7 @@ import * as cheerio from "cheerio";
 
 const HTML_FILE = "data/source/labor-law-14-2025.html";
 
-const OUTPUT_FILE = "labor-law-14-2025.json";
+const OUTPUT_FILE = "data/raw/labor-law-14-2025.json";
 
 const SOURCE_URL = "https://manshurat.org/content/qnwn-lml-ljdyd-2025";
 

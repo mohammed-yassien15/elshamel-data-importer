@@ -1,8 +1,8 @@
 import fs from "fs";
 
-const INPUT_FILE = "labor-law-14-2025.json";
+const INPUT_FILE = "data/raw/labor-law-14-2025.json";
 
-const OUTPUT_FILE = "labor-law-14-2025-final.json";
+const OUTPUT_FILE = "data/final/labor-law-14-2025-final.json";
 
 const EXPECTED = {
   issuanceArticles: 13,
