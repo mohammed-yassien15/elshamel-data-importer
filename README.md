@@ -28,12 +28,17 @@ src/
   cleaners/     # Normalization and law-specific corrections
   importers/    # Validated Supabase import scripts
 
+data/
+  source/       # Saved HTML source pages used by local scrapers
+  raw/          # Scraper output before cleanup
+  final/        # Cleaned and validated datasets ready for import
+
 .env.example
 package.json
 README.md
 ```
 
-Generated and source datasets are temporarily kept in the repository root because the existing scripts use root-relative data paths. They will be migrated to a dedicated `data/` structure together with path updates in a separate safe refactor.
+Source pages and generated datasets are organized under `data/source`, `data/raw`, and `data/final`. Scrapers, cleaners, and importers use these paths directly.
 
 ## Pipeline
 
