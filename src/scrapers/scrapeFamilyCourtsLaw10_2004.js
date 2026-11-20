@@ -1,7 +1,7 @@
 import fs from "fs";
 import * as cheerio from "cheerio";
 
-const HTML_FILE = "family-courts-law-10-2004.html";
+const HTML_FILE = "data/source/family-courts-law-10-2004.html";
 
 const OUTPUT_FILE = "family-courts-law-10-2004.json";
 
