@@ -3,7 +3,7 @@ import * as cheerio from "cheerio";
 
 const SOURCE_URL = "https://alhasswalawfirm.com/law-library/law-25-1920";
 
-const OUTPUT_FILE = "personal-status-law-25-1920.json";
+const OUTPUT_FILE = "data/raw/personal-status-law-25-1920.json";
 
 // =========================================================
 // HELPERS
