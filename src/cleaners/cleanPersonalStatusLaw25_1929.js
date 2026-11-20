@@ -1,8 +1,8 @@
 import fs from "fs";
 
-const INPUT_FILE = "personal-status-law-25-1929.json";
+const INPUT_FILE = "data/raw/personal-status-law-25-1929.json";
 
-const OUTPUT_FILE = "personal-status-law-25-1929-final.json";
+const OUTPUT_FILE = "data/final/personal-status-law-25-1929-final.json";
 
 const EXPECTED = {
   total: 34,

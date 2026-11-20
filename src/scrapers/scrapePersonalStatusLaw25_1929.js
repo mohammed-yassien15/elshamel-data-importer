@@ -6,7 +6,7 @@ const HTML_FILE = "data/source/law-25-1929.html";
 const SOURCE_URL =
   "https://alberonsy.com/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%B1%D9%82%D9%85-25-%D9%84%D8%B3%D9%86%D8%A9-1929-%D9%81%D9%89-%D8%B4%D8%A3%D9%86-%D8%A8%D8%B9%D8%B6-%D8%A3%D8%AD%D9%83%D8%A7%D9%85-%D8%A7%D9%84%D8%A3%D8%AD%D9%88/";
 
-const OUTPUT_FILE = "personal-status-law-25-1929.json";
+const OUTPUT_FILE = "data/raw/personal-status-law-25-1929.json";
 
 const EXPECTED = {
   total: 34,
